@@ -41,13 +41,28 @@ export default {
   axios: {
     baseURL: 'http://localhost:3000/', // Установите базовый URL для ваших запросов
   },
-
   vuetify: {
     optionsPath: "./plugins/vuetify.js",
     treeShake: true,
     defaultAssets: undefined,
   },
+  purgeCSS: {
+    // Конфигурация для PurgeCSS
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      './node_modules/vuetify/dist/*.js',
+      './node_modules/vuetify/dist/*.css',
+      './node_modules/vuetify/src/**/*.ts',
 
+    ],
+    styleExtensions: ['.css'],
+    whitelist: [
+      'body', 'html', 'nuxt-progress', '',
+    ],
+    whitelistPatternsChildren: [/swiper/],
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extractCSS: true

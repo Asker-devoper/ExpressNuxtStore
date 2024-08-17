@@ -1,39 +1,40 @@
 <template>
-  <div class="SignIn">
-    <div class="sign-in-content">
+  <v-app>
+  <div class="SignUp">
+    <div class="SignUp-content">
       <div class="title">
         <p>REGISTER</p>
       </div>
       <v-form ref="forms" @submit.prevent="submit">
-        <div class="name-input input">
+        <div class="name-input form-input">
           <p>Name</p>
           <v-text-field ref="name" v-model="name" placeholder="Name" class="name-input" :rules="nameRules"
             required></v-text-field>
         </div>
-        <div class="name-input input">
+        <div class="email-input form-input">
           <p>Email</p>
           <v-text-field ref="email" v-model="email" :rules="emailRules" placeholder="Email" class="email-input"
             required></v-text-field>
         </div>
-        <div class="name-input input">
+        <div class="phone-input form-input">
           <p>Phone</p>
           <v-text-field ref="phone" v-model="phone" :rules="phoneRules" placeholder="Phone" class="phone-input"
             type="number" required></v-text-field>
         </div>
 
-        <div class="name-input input">
+        <div class="password-input form-input">
           <p>Password</p>
           <v-text-field ref="password" v-model="password" :rules="passwordRules" hint="At least 8 characters"
             placeholder="Password" counter type="password" color="#1687F7" class="password-input"
             @click:append="show1 = !show1"></v-text-field>
         </div>
-        <div class="name-input input">
+        <div class="confirmPassword-input form-input">
           <p>Confirm Password</p>
           <v-text-field ref="confirmPassword" v-model="confirmPassword" :rules="passwordConfirmationRules"
             hint="At least 8 characters" placeholder="Password confirm" counter type="password" color="#1687F7"
             class="password-input" @click:append="show1 = !show1"></v-text-field>
         </div>
-        <v-btn color="white" text @click="submit">
+        <v-btn class="SignUp-button" text @click="submit">
           Register
         </v-btn>
         <div class="form-description">
@@ -42,6 +43,7 @@
       </v-form>
     </div>
   </div>
+</v-app>
 </template>
 <script>
 import { mapMutations } from 'vuex'
@@ -113,89 +115,87 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 .auth-window-img {
   position: relative;
   left: 3px;
 }
 
-.SignIn {
+.SignUp {
   margin-top: 62px;
   display: flex;
   justify-content: space-between;
 }
 
-.title {
+.SignUp .title {
   padding-left: 49px;
 }
 
-.title p {
+.SignUp .title p {
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 27px;
 }
 
-.v-form {
+.SignUp .v-form {
   padding-left: 14px;
   width: 100%;
 }
 
-.v-text-field {
+.SignUp .v-text-field {
   padding: 0;
-  margin: 0 0 10px 17px;
+  margin: 0 0 6px 17px;
   width: 270px;
 }
 
-::v-deep .v-input__slot::before {
+.SignUp ::v-deep .v-input__slot::before {
   border-color: rgba(22, 135, 247, 1) !important;
 }
 
->>>.v-input input {
-  max-height: 24px !important;
-}
-
->>>.v-btn {
+.SignUp .SignUp-button {
   background: linear-gradient(269.46deg, #A36DA2 0.24%, #59A0C5 96.9%);
   box-shadow: 0px 10px 20px rgba(86, 196, 249, 0.3);
   border-radius: 15px;
   margin-top: 14px;
   margin-left: 49px;
+  color: white;
 }
 
-.v-btn:not(.v-btn--round).v-size--default {
-
+.SignUp .v-btn:not(.v-btn--round).v-size--default {
   padding: 0 32%;
   height: 46px;
 }
 
-.v-btn.v-size--default {
+.SignUp .v-btn.v-size--default {
   font-size: 20px;
 }
 
->>>.v-text-field input {
+.SignUp .form-input .v-text-field input {
   color: #1687F7;
+  max-height: 24px !important;
 }
 
-.input {
+.SignUp .form-input {
   display: flex;
   align-items: baseline;
 }
 
-.input p {
+.SignUp .form-input p {
   text-align: right;
   width: 146px;
   margin: 0;
 }
 
-.form-description p {
+.SignUp .form-description p {
   color: #A6A0A0;
   font-size: 16px;
   margin-top: 20px;
   text-align: center;
 }
 
-.form-description p span {
+.SignUp .form-description p span {
   color: #0666F7;
-
+  cursor: pointer;
 }
+
 </style>

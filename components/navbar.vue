@@ -76,7 +76,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 nav li a:hover,
 nav li a.nuxt-link-active,
 nav li a.nuxt-link-exact-active {
@@ -84,7 +84,7 @@ nav li a.nuxt-link-exact-active {
   cursor: pointer;
 }
 
-::v-deep .v-application--wrap {
+header .v-application--wrap {
   min-height: fit-content;
 }
 
@@ -128,6 +128,7 @@ li a img {
   background: linear-gradient(269.46deg, #A36DA2 0.24%, #59A0C5 96.9%);
   box-shadow: 0px 10px 20px rgba(86, 196, 249, 0.3);
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .v-dialog__content--active {
@@ -142,7 +143,6 @@ li a img {
   line-height: 46px;
   color: #FFFDFD;
   font-size: 16px;
-  cursor: pointer;
 }
 
 .auth-window-logo {

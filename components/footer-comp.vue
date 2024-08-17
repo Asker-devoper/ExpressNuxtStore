@@ -12,9 +12,6 @@
                 ORDER ANYTIME AND RECEIVE FREE AND FAST DELIVERY.</p>
             </div>
           </div>
-
-
-
           <div class="footer-policy">
             <div class="footer-policy-title footer-title">
               <p>policy</p>
@@ -30,9 +27,6 @@
               </ul>
             </div>
           </div>
-
-
-
           <div class="footer-contact">
             <div class="footer-contact-title footer-title">
               <p>contact</p>
@@ -44,10 +38,6 @@
               <p><span>Address</span><a href="#">Maitidevi, Kathmandu</a></p>
             </div>
           </div>
-
-
-
-
           <div class="footer-socials">
             <div class="footer-socials-title footer-title">
               <p>socials</p>
@@ -64,7 +54,7 @@
 </template>
 
 <script>
-export default { 
+export default {
   data() {
     return {
     }
@@ -105,6 +95,9 @@ export default {
   font-size: 15px;
   font-weight: 300;
 }
+.footer-subtitle li{
+  margin: 0;
+}
 
 .footer-contact-subtitle {
   display: flex;
@@ -120,22 +113,15 @@ export default {
   color: #FFFFFF;
   font-weight: 200;
 }
-
-
-
 .footer-policy-subtitle {
   color: #FFFFFF;
   font-size: 15px;
   font-weight: 300;
   display: flex;
   width: 316px;
-  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 25px;
 }
-
-
-
 .footer-socials {
   display: flex;
   width: 317px;

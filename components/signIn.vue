@@ -1,6 +1,7 @@
 <template>
+  <v-app>
   <div class="SignIn">
-    <div class="sign-in-content">
+    <div class="SignIn-content">
       <div class="title">
         <p>SIGN IN</p>
       </div>
@@ -13,13 +14,14 @@
         <v-text-field ref="password" v-model="password" :append-icon="'$lock'" :rules="passwordRules"
           hint="At least 8 characters" placeholder="Password" counter type="password" color="#1687F7"
           class="password-input"></v-text-field>
-        <v-btn color="white" text @click="submit">
+        <v-btn class="SignIn-button" color="white" text @click="submit">
           Sign In
         </v-btn>
         <div class="form-description">Haven’t Registered?&nbsp;&nbsp;<span @click="ChangeSignIn">Sign Up</span></div>
       </v-form>
     </div>
   </div>
+  </v-app>
 </template>
 <script>
 import { mapActions, mapMutations } from 'vuex'
@@ -82,8 +84,6 @@ export default {
   margin-top: 130px;
 }
 
-.sign-in-content {}
-
 .title>p {
   font-weight: 600;
   font-size: 24px;
@@ -144,11 +144,11 @@ export default {
   max-height: 36px !important;
 }
 
->>>.v-input__append-inner {
+.v-input__append-inner {
   padding-right: 2px;
 }
 
->>>.v-btn {
+.SignIn-button {
   background: linear-gradient(180deg, rgba(12, 218, 246, 0.72) 0%, rgba(6, 102, 247, 0.64) 100%);
   box-shadow: 0px 10px 20px rgba(86, 196, 249, 0.3);
   border-radius: 15px;
@@ -176,7 +176,7 @@ export default {
 
 .form-description span {
   color: #0666F7;
-
+  cursor: pointer;
 }
 
 .form-description {

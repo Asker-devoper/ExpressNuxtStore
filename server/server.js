@@ -3,7 +3,7 @@ const { loadNuxt, build } = require('nuxt');
 
 const app = express();
 const isDev = process.env.NODE_ENV !== 'production';
-const port = process.env.PORT || 3000;
+const port = 3000;
  
 const mongoose = require('mongoose'); 
 const authRouter = require('./authRouter');
